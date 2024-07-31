@@ -27,10 +27,18 @@ def BinarySearch (ms,searchInt):
 
     return False;
 
+def quickSort (elms):
+    if len (elms) <= 1 :
+        return elms
+    
+    elm = elms[0]
+    left = list(filter(lambda x: x < elm, elms))
+    center = [i for i in elms if i == elm ]
+    right = list(filter(lambda x: x > elm, elms))
+
+    return quickSort(left) + center + quickSort(right)
+
+
 ms = [3,4,1,2,6]
-sortMs = boobleSorts(ms)
-resul = BinarySearch(sortMs,5)
-if resul:
-    print('Есть такое число')
-else:
-    print('НЕТ')
+st = quickSort(ms)
+print (st)
