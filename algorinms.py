@@ -38,7 +38,5 @@ def quickSort (elms):
 
     return quickSort(left) + center + quickSort(right)
 
-
-ms = [3,4,1,2,6]
-st = quickSort(ms)
-print (st)
+def mareg_sort ():
+    pass
